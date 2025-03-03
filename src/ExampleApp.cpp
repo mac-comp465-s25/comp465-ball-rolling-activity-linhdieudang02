@@ -139,9 +139,9 @@ void ExampleApp::onRenderGraphicsContext(const VRGraphicsState &renderState) {
     
     //TODO: Update the sphereFrame matrix to move the ball's position based on the dir variable.
     //Make the ball rotate so that it looks like it is rolling on the table.
-    
-    
-    
+    sphereFrame = translate(sphereFrame, dir);
+    float rotationSpeed = 0.001f;
+    sphereFrame = rotate(sphereFrame, rotationSpeed, normalize(dir));
     
     
 }
